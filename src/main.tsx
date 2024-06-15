@@ -3,11 +3,11 @@ import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import BookList from "./books/BookList.tsx";
-import AuthorList from "./authors/AuthorList.tsx";
-import BookDetail from "./books/BookDetails.tsx";
-import AuthorDetails from "./authors/AuthorDetails.tsx";
-import NotFoundPage from "./navigation/NotFoundPage.tsx";
+import BookList from "./views/books/BookList.tsx";
+import AuthorList from "./views/authors/AuthorList.tsx";
+import BookDetail from "./views/books/BookDetails.tsx";
+import AuthorDetails from "./views/authors/AuthorDetails.tsx";
+import NotFoundPage from "./views/navigation/NotFoundPage.tsx";
 
 const router = createBrowserRouter([
   {

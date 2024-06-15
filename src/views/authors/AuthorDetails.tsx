@@ -1,5 +1,5 @@
 import { Typography, Container, CircularProgress } from "@mui/material";
-import useFetch from "../services/fetchService";
+import useFetch from "../../services/fetchService";
 import { useParams } from "react-router-dom";
 
 const AuthorDetail: React.FC = () => {

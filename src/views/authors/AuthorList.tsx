@@ -9,7 +9,7 @@ import {
   Typography,
 } from "@mui/material";
 import PageLayout from "../layouts/Pagelayout";
-import useFetch from "../services/fetchService";
+import useFetch from "../../services/fetchService";
 import LinkRouter from "../navigation/NavLinkRouter";
 
 const AuthorItem = ({author}) => {
