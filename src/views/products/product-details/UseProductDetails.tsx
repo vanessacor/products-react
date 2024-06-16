@@ -9,7 +9,7 @@ export const UseProductDetails = () => {
   const [hasError, setHasError] = useState(false);
 
   const { id } = useParams();
-  const { findById } = productRepositoryApi();
+  const { getProductById } = productRepositoryApi();
 
   const getProduct = async () => {
     setIsLoading(true);
@@ -18,7 +18,7 @@ export const UseProductDetails = () => {
         setHasError(true);
         return;
       }
-      const res = await findById(id);
+      const res = await getProductById(id);
       setProduct(res);
       setIsLoading(false);
     } catch (e) {

@@ -10,11 +10,11 @@ export const ProductList = () => {
     <Container maxWidth="md">
       {hasError && <p>Error</p>}
       {isLoading && <CircularProgress />}
-      <Grid container spacing={2} columns={{ xs: 4, sm: 8, md: 12 }}>
+      <Grid container spacing={2}>
         {list &&
-          list.map((Product: Product) => (
-            <Grid item xs={12} key={Product.id}>
-              <ProductCard Product={Product} />
+          list.map((product: Product) => (
+            <Grid item>
+              <ProductCard product={product} />
             </Grid>
           ))}
       </Grid>

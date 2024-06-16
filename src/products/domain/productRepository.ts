@@ -1,6 +1,6 @@
 import { Product } from "./product";
 
 export interface ProductRepository {
-  findById: (id: string) => Promise<Product>;
-  getAll: () => Promise<Product[]>;
+  getProductById: (id: string) => Promise<Product>;
+  getAllProducts: () => Promise<Product[]>;
 }

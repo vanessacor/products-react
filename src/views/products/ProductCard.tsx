@@ -1,24 +1,45 @@
-import { Card, CardActions, CardContent, CardHeader, Typography } from "@mui/material"
-import { Link } from "react-router-dom"
-import { Product } from "../../products/domain/product"
+import {
+  Card,
+  CardActions,
+  CardContent,
+  CardHeader,
+  CardMedia,
+  Typography,
+} from "@mui/material";
+import { Link } from "react-router-dom";
+import { Product } from "../../products/domain/product";
 
-interface ProductCardProps{
-  Product: Product
+interface ProductCardProps {
+  product: Product;
 }
 
-export const ProductCard: React.FC<ProductCardProps>= ({Product}) => {
+const truncateDescription = (string) => {
+  const MAX_CHAR_ALLOWED = 100;
+  return string.length >= MAX_CHAR_ALLOWED
+    ? `${string.slice(0, MAX_CHAR_ALLOWED - 1)}...`
+    : string;
+};
+
+export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
-    <Card>
-      <CardHeader title={Product.title}/>
+    <Card sx={{ maxWidth: 345 }}>
+      <CardHeader title={product.title} />
+      <CardMedia
+        height="200"
+        component="img"
+        image={product.image}
+        alt="Paella dish"
+      />
       <CardContent>
         <Typography variant="body1">
-          {Product.description}
+          {truncateDescription(product.description)}
         </Typography>
       </CardContent>
       <CardActions>
-        <Link to={`/Products/${Product.id}`} relative="path">See Details</Link>
+        <Link to={`/products/${product.id}`} relative="path">
+          See Details
+        </Link>
       </CardActions>
     </Card>
-  )
-}
-
+  );
+};

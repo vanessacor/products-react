@@ -6,12 +6,12 @@ export const useProductList = () => {
   const [list, setList] = useState<ProductList>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [hasError, setHasError] = useState(false);
-  const { getAll } = productRepositoryApi();
+  const { getAllProducts } = productRepositoryApi();
 
   const getList = async () => {
     setIsLoading(true);
     try {
-      const res = await getAll();
+      const res = await getAllProducts();
       setList(res);
       setIsLoading(false);
     } catch (e) {

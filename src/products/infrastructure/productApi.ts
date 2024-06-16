@@ -4,12 +4,12 @@ import { ProductRepository } from "../domain/productRepository";
 
 export const productRepositoryApi = (): ProductRepository => {
   return {
-    findById,
-    getAll,
+    getProductById,
+    getAllProducts,
   };
 };
 
-async function findById(id: string) {
+async function getProductById(id: string) {
   try {
     const result = await fetch(`https://fakestoreapi.com/products/${id}`);
     const res = await result.json();
@@ -20,7 +20,7 @@ async function findById(id: string) {
     throw new Error();
   }
 }
-async function getAll() {
+async function getAllProducts() {
   try {
     const result = await fetch("https://fakestoreapi.com/products");
     const res = await result.json();

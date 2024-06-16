@@ -14,11 +14,11 @@ const router = createBrowserRouter([
     errorElement: <NotFoundPage />,
     children: [
       {
-        path: "/Products",
+        path: "/products",
         element: <ProductList />,
       },
       {
-        path: "Products/:id",
+        path: "products/:id",
         element: <ProductDetail />,
       },
     ],
