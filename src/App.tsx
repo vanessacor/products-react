@@ -1,4 +1,4 @@
-import PageLayout from "./layouts/Pagelayout";
+import PageLayout from "./views/layouts/Pagelayout";
 import { Outlet } from "react-router-dom";
 
 function App() {

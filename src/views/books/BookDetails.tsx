@@ -1,6 +1,5 @@
 import { Typography,Container, CircularProgress } from "@mui/material";
 import { useParams } from "react-router-dom";
-import PageLayout from "../../layouts/Pagelayout";
 import useFetch from "../../services/fetchService";
 
 const BookDetail: React.FC = () => {

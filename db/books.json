@@ -5,42 +5,42 @@
       "title": "Viagem do Elefante",
       "summary": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsum",
       "isbn": "911111111",
-      "genreId": [1],
-      "languageId": 2,
-      "authorId": 1
+      "authorId": 1,
+      "genreId": 1,
+      "languageId": 2
     },
     {
       "id": 2,
       "title": "Ano da Morte de Ricardo Reis",
       "summary": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsum",
       "isbn": "911111111",
-      "genreId": [1],
-      "languageId": 2,
-      "authorId": 1
+      "authorId": 1,
+      "genreId": 1,
+      "languageId": 2
     },
     {
       "id": 3,
       "title": "The Picture of Dorian Gray",
       "summary": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsum",
       "isbn": "911111111",
-      "genreId": [1],
-      "languageId": 1,
-      "authorId": 2
+      "authorId": 2,
+      "genreId": 1,
+      "languageId": 1
     },
     {
       "id": 4,
       "title": "War and Peace",
       "summary": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsum",
       "isbn": "911111111",
-      "genreId": [1],
-      "languageId": 1,
-      "authorId": 3
+      "authorId": 3,
+      "genreId": 2,
+      "languageId": 1
     }
   ],
   "authors": [
-    { "id": 1, "name": "Jose Saramago", "booksId": [1, 2] },
-    { "id": 2, "name": "Oscar Wild", "booksId": [3] },
-    { "id": 3, "name": "Leo Tolstoy", "booksId": [4] }
+    { "id": 1, "name": "Jose Saramago" },
+    { "id": 2, "name": "Oscar Wild" },
+    { "id": 3, "name": "Leo Tolstoy" }
   ],
   "genres": [
     { "id": 1, "name": "romance" },
