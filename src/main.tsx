@@ -3,10 +3,8 @@ import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import BookList from "./views/books/BookList.tsx";
-import AuthorList from "./views/authors/AuthorList.tsx";
-import BookDetail from "./views/books/BookDetails.tsx";
-import AuthorDetails from "./views/authors/AuthorDetails.tsx";
+import { ProductList } from "./views/products/product-list/ProductList.tsx";
+import { ProductDetail } from "./views/products/product-details/ProductDetails.tsx";
 import NotFoundPage from "./views/navigation/NotFoundPage.tsx";
 
 const router = createBrowserRouter([
@@ -16,23 +14,14 @@ const router = createBrowserRouter([
     errorElement: <NotFoundPage />,
     children: [
       {
-        path: "/books",
-        element: <BookList />,
+        path: "/Products",
+        element: <ProductList />,
       },
       {
-    
-        path: "books/:id",
-        element: <BookDetail/>, 
+        path: "Products/:id",
+        element: <ProductDetail />,
       },
-      {
-        path: "/authors",
-        element: <AuthorList />,
-      },
-      {
-        path: "/authors/:id",
-        element: <AuthorDetails />,
-      },
-    ]
+    ],
   },
 ]);
 

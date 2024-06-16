@@ -8,7 +8,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({ children }) => {
   return (
     <Container maxWidth="lg">
       <header>
-        <Typography variant="h1">My Books</Typography>
+        <Typography variant="h1">My Products</Typography>
         <NavigationBar />
       </header>
       <Container maxWidth="md">{children}</Container>

@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { BookRepositoryApi } from "../../books/infrastructure/bookApi";
-import { BookList } from "../../books/domain/book";
+import { productRepositoryApi } from "../../../products/infrastructure/productApi";
+import { ProductList } from "../../../products/domain/product";
 
-export const useBookList = () => {
-  const [list, setList] = useState<BookList>([]);
+export const useProductList = () => {
+  const [list, setList] = useState<ProductList>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [hasError, setHasError] = useState(false);
-  const { getAll } = BookRepositoryApi();
+  const { getAll } = productRepositoryApi();
 
   const getList = async () => {
     setIsLoading(true);

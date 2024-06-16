@@ -9,11 +9,8 @@ function NavigationBar() {
       <NavLinkRouter underline="hover" color="inherit" to="/">
         Home
       </NavLinkRouter> 
-      <NavLinkRouter underline="hover" color="inherit" to="/books">
-        Books
-      </NavLinkRouter> 
-      <NavLinkRouter underline="hover" color="inherit" to="/authors">
-        Authors
+      <NavLinkRouter underline="hover" color="inherit" to="/Products">
+        Products
       </NavLinkRouter> 
       </Breadcrumbs>
     </nav>
