@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Product } from "../../../products/domain/product";
-import { productRepositoryApi } from "../../../products/infrastructure/productApi";
+import { Product } from "../../../products/models";
+import { productRepositoryApi } from "../../../products/productApi";
 import { useParams } from "react-router-dom";
 
 export const UseProductDetails = () => {

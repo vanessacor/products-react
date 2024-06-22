@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { ProductList } from "./views/products/product-list/ProductList.tsx";
+import { ProductList } from "./views/products/product-list/ProductPage.tsx";
 import { ProductDetail } from "./views/products/product-details/ProductDetails.tsx";
 import NotFoundPage from "./views/navigation/NotFoundPage.tsx";
 

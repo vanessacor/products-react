@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
-import { productRepositoryApi } from "../../../products/infrastructure/productApi";
-import { ProductList } from "../../../products/domain/product";
+import { productRepositoryApi } from "../../../products/productApi";
+import { ProductList } from "../../../products/models";
 
 export const useProductList = () => {
   const [list, setList] = useState<ProductList>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [hasError, setHasError] = useState(false);
   const { getAllProducts } = productRepositoryApi();
+  // filteredList -> sortyBy, and searchTerms
 
   const getList = async () => {
     setIsLoading(true);
@@ -15,7 +16,6 @@ export const useProductList = () => {
       setList(res);
       setIsLoading(false);
     } catch (e) {
-      console.log(e);
       setHasError(true);
       setIsLoading(false);
       throw new Error();

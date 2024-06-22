@@ -7,7 +7,7 @@ import {
   Typography,
 } from "@mui/material";
 import { Link } from "react-router-dom";
-import { Product } from "../../products/domain/product";
+import { Product } from "../../products/models";
 
 interface ProductCardProps {
   product: Product;
