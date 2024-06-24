@@ -13,7 +13,10 @@ export const ProductTable = () => {
     <>
       <TableHeader collumns={tableColumns} />
       <TableBody>
-        {list.length && list.map((product) => <ProductRow product={product} />)}
+        {list.length &&
+          list.map((product) => (
+            <ProductRow key={product.id} product={product} />
+          ))}
       </TableBody>
     </>
   );

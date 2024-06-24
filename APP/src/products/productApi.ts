@@ -9,7 +9,7 @@ type ProductRepository = {
 export const productRepositoryApi = (): ProductRepository => {
   async function getProductById(id: string) {
     try {
-      const result = await fetch(`https://fakestoreapi.com/products/${id}`);
+      const result = await fetch(`http://localhost:5000/api/products/${id}`);
       const res = await result.json();
       const product = ProductSchema.parse(res);
       return product;
@@ -20,7 +20,7 @@ export const productRepositoryApi = (): ProductRepository => {
   }
   async function getAllProducts() {
     try {
-      const result = await fetch("https://fakestoreapi.com/products");
+      const result = await fetch("http://localhost:5000/api/products");
       const res = await result.json();
       const products = ProductListSchema.parse(res);
       return products;
